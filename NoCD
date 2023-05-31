@@ -1,0 +1,29 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Abilitys", "BloodTheme")
+
+local Tab = Window:NewTab("Ability")
+local Section = Tab:NewSection("Ability")
+
+Section:NewKeybind("Counter", "counter", Enum.KeyCode.F, function()
+    game:GetService("ReplicatedStorage"):WaitForChild("Counter"):FireServer()
+end)
+
+Section:NewKeybind("Sparky", "Sparky", Enum.KeyCode.F, function()
+    local args = {
+        [1] = game:GetService("Players").LocalPlayer.Character.Sparky
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("Sparky"):FireServer(unpack(args))
+end)
+
+Section:NewKeybind("Diamond", "peda", Enum.KeyCode.F, function()
+    game:GetService("ReplicatedStorage"):WaitForChild("Rockmode"):FireServer()
+end)
+
+Section:NewKeybind("Kraken", "lula", Enum.KeyCode.F, function()
+    game:GetService("ReplicatedStorage"):WaitForChild("KrakenArm"):FireServer()
+end)
+
+Section:NewKeybind("Quake", "BloxFruits", Enum.KeyCode.F, function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/3mzCzBz8'),true))()
+end)
