@@ -1,8 +1,11 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Abilitys", "BloodTheme")
 
-local Tab = Window:NewTab("Ability")
-local Section = Tab:NewSection("Ability")
+local KeyBinds = Window:NewTab("KeyBinds")
+local KeyBinds = KeyBinds:NewSection("KeyBinds")
+
+local Toggles = Window:NewTab("Toggles")
+local Toggles = KeyBinds:NewSection("Toggles")
 
 Section:NewKeybind("Counter", "counter", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Counter"):FireServer()
