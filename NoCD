@@ -2,16 +2,16 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Abilitys", "BloodTheme")
 
 local KeyBinds = Window:NewTab("KeyBinds")
-local KeyBinds = KeyBinds:NewSection("KeyBinds")
+local KeyBinds1 = KeyBinds:NewSection("KeyBinds")
 
 local Toggles = Window:NewTab("Toggles")
-local Toggles = KeyBinds:NewSection("Toggles")
+local Toggles1 = Toggles:NewSection("Toggles")
 
-Section:NewKeybind("Counter", "counter", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("Counter", "counter", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Counter"):FireServer()
 end)
 
-Section:NewKeybind("Sparky", "Sparky", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("Sparky", "Sparky", Enum.KeyCode.F, function()
     local args = {
         [1] = game:GetService("Players").LocalPlayer.Character.Sparky
     }
@@ -19,43 +19,43 @@ Section:NewKeybind("Sparky", "Sparky", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Sparky"):FireServer(unpack(args))
 end)
 
-Section:NewKeybind("Diamond", "peda", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("Diamond", "peda", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Rockmode"):FireServer()
 end)
 
-Section:NewKeybind("Kraken", "lula", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("Kraken", "lula", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("KrakenArm"):FireServer()
 end)
 
-Section:NewKeybind("Quake", "BloxFruits", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("Quake", "BloxFruits", Enum.KeyCode.F, function()
     loadstring(game:HttpGet(('https://pastebin.com/raw/3mzCzBz8'),true))()
 end)
 
-Section:NewKeybind("Phase", "undertale", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("Phase", "undertale", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("PhaseA"):FireServer()
 end)
 
-Section:NewKeybind("Uno", "infinite", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("Uno", "infinite", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("ReverseAbility"):FireServer()
 end)
 
-Section:NewKeybind("MegaRock", "diamond 2", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("MegaRock", "diamond 2", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Rockmode"):FireServer()
 end)
 
-Section:NewKeybind("ZZZZZZZ", "amimir", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("ZZZZZZZ", "amimir", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("ZZZZZZZSleep"):FireServer()
 end)
 
-Section:NewKeybind("GhostOFF", "Recommend to use after normal ghost ability", Enum.KeyCode.G, function()
+KeyBinds1:NewKeybind("GhostOFF", "Recommend to use after normal ghost ability", Enum.KeyCode.G, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Ghostinvisibilitydeactivated"):FireServer()
 end)
 
-Section:NewKeybind("GhostON", "Recommend to use after normal ghost ability", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("GhostON", "Recommend to use after normal ghost ability", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Ghostinvisibilityactivated"):FireServer()
 end)
 
-Section:NewKeybind("GoldenOFF", "infinite", Enum.KeyCode.G, function()
+KeyBinds1:NewKeybind("GoldenOFF", "infinite", Enum.KeyCode.G, function()
     local args = {
         [1] = false,
         [2] = BrickColor.new(1021)
@@ -64,7 +64,7 @@ Section:NewKeybind("GoldenOFF", "infinite", Enum.KeyCode.G, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Goldify"):FireServer(unpack(args))
 end)
 
-Section:NewKeybind("GoldenON", "infinite", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("GoldenON", "infinite", Enum.KeyCode.F, function()
     local args = {
         [1] = true
     }
@@ -72,6 +72,6 @@ Section:NewKeybind("GoldenON", "infinite", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Goldify"):FireServer(unpack(args))
 end)
 
-Section:NewKeybind("Checky", "ball", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("Checky", "ball", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Spherify"):FireServer()
 end)
