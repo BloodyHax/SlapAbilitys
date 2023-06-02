@@ -75,3 +75,20 @@ end)
 KeyBinds1:NewKeybind("Checky", "ball", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Spherify"):FireServer()
 end)
+
+KeyBinds1:NewKeybind("Checky", "ball", Enum.KeyCode.F, function()
+    local args = {
+        [1] = {
+            ["start"] = true
+        }
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("HomeRun"):FireServer(unpack(args))
+    local args = {
+        [1] = {
+            ["finished"] = true
+        }
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("HomeRun"):FireServer(unpack(args))
+end)
