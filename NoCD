@@ -76,7 +76,7 @@ KeyBinds1:NewKeybind("Checky", "ball", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Spherify"):FireServer()
 end)
 
-KeyBinds1:NewKeybind("Checky", "ball", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("Homerun", "bonk", Enum.KeyCode.F, function()
     local args = {
         [1] = {
             ["start"] = true
