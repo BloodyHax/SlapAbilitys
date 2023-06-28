@@ -76,19 +76,18 @@ KeyBinds1:NewKeybind("Checky", "ball", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Spherify"):FireServer()
 end)
 
-KeyBinds1:NewKeybind("Homerun", "bonk", Enum.KeyCode.F, function()
+KeyBinds1:NewKeybind("Rob", "rob", Enum.KeyCode.F, function()
+    game:GetService("ReplicatedStorage").rob:FireServer()
+end)
+
+KeyBinds1:NewKeybind("Phantom", "ghost2", Enum.KeyCode.F, function()
     local args = {
-        [1] = {
-            ["start"] = true
-        }
+        [1] = game:GetService("Players").LocalPlayer.Character.Phantom
     }
 
-    game:GetService("ReplicatedStorage"):WaitForChild("HomeRun"):FireServer(unpack(args))
-    local args = {
-        [1] = {
-            ["finished"] = true
-        }
-    }
+    game:GetService("ReplicatedStorage").PhantomDash:InvokeServer(unpack(args))
+end)
 
-    game:GetService("ReplicatedStorage"):WaitForChild("HomeRun"):FireServer(unpack(args))
+KeyBinds1:NewKeybind("Warp", "WLOC", Enum.KeyCode.F, function()
+    game:GetService("ReplicatedStorage").WLOC:FireServer()
 end)
