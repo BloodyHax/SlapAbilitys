@@ -91,3 +91,7 @@ end)
 KeyBinds1:NewKeybind("Warp", "WLOC", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage").WLOC:FireServer()
 end)
+
+KeyBinds1:NewKeybind("VooDoo", "vud", Enum.KeyCode.F, function()
+    game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+end)
