@@ -99,3 +99,7 @@ end)
 KeyBinds1:NewKeybind("Mail", "mail", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage").MailSend:FireServer()
 end)
+
+KeyBinds1:NewKeybind("Duelist", "1v1", Enum.KeyCode.F, function()
+    game:GetService("ReplicatedStorage").DuelistAbility:FireServer()
+end)
