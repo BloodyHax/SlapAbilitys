@@ -58,7 +58,7 @@ end)
 KeyBinds1:NewKeybind("GoldenOFF", "infinite", Enum.KeyCode.G, function()
     local args = {
         [1] = false,
-        [2] = BrickColor.new(1021)
+        [2] = BrickColor.new(1017)
     }
 
     game:GetService("ReplicatedStorage"):WaitForChild("Goldify"):FireServer(unpack(args))
@@ -102,4 +102,21 @@ end)
 
 KeyBinds1:NewKeybind("Duelist", "1v1", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage").DuelistAbility:FireServer()
+end)
+
+KeyBinds1:NewKeybind("Homerun", "slap", Enum.KeyCode.F, function()
+    local args = {
+    [1] = {
+        ["start"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage").HomeRun:FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["finished"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage").HomeRun:FireServer(unpack(args))
 end)
