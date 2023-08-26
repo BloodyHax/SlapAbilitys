@@ -120,3 +120,15 @@ local args = {
 
 game:GetService("ReplicatedStorage").HomeRun:FireServer(unpack(args))
 end)
+
+KeyBinds1:NewKeybind("Gravity", "c-moon", Enum.KeyCode.F, function()
+    game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+end)
+
+KeyBinds1:NewKeybind("Fish", "flop", Enum.KeyCode.F, function()
+    game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+end)
+
+KeyBinds1:NewKeybind("bus", "a", Enum.KeyCode.F, function()
+    game:GetService("ReplicatedStorage"):WaitForChild("busmoment"):FireServer()
+end)
