@@ -4,8 +4,8 @@ local Window = Library.CreateLib("Abilitys", "BloodTheme")
 local KeyBinds = Window:NewTab("KeyBinds")
 local KeyBinds1 = KeyBinds:NewSection("KeyBinds")
 
-local Toggles = Window:NewTab("Toggles")
-local Toggles1 = Toggles:NewSection("Toggles")
+local Buttons = Window:NewTab("Buttons")
+local Buttons1 = Buttons:NewSection("Buttons")
 
 KeyBinds1:NewKeybind("Counter", "counter", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("Counter"):FireServer()
@@ -131,4 +131,18 @@ end)
 
 KeyBinds1:NewKeybind("bus", "a", Enum.KeyCode.F, function()
     game:GetService("ReplicatedStorage"):WaitForChild("busmoment"):FireServer()
+end)
+
+KeyBinds1:NewKeybind("bus", "a", Enum.KeyCode.F, function()
+    game:GetService("ReplicatedStorage"):WaitForChild("bob"):FireServer()
+end)
+
+KeyBinds1:NewKeybind("Lure", "shark", Enum.KeyCode.F, function()
+    game:GetService("ReplicatedStorage"):WaitForChild("GeneralAbility"):FireServer()
+end)
+
+Buttons1:NewButton("Kinetic", "Fully Change", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+    loadstring(game:HttpGet(('https://pastebin.com/raw/cpG7TBT2'),true))()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end)
