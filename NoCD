@@ -1,8 +1,11 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Abilitys", "BloodTheme")
+local Window = Library.CreateLib("Bloodyhub | Abilitys", "BloodTheme")
 
 local KeyBinds = Window:NewTab("KeyBinds")
 local KeyBinds1 = KeyBinds:NewSection("KeyBinds")
+
+local Toggles = Window:NewTab("Toggles")
+local Toggles1 = Toggles:NewSection("Toggles")
 
 local Buttons = Window:NewTab("Buttons")
 local Buttons1 = Buttons:NewSection("Buttons")
@@ -154,4 +157,104 @@ Buttons1:NewButton("Kinetic", "Fully Change", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
     loadstring(game:HttpGet(('https://pastebin.com/raw/cpG7TBT2'),true))()
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+end)
+
+Toggles1:NewToggle("Charge Kinetic", "be careful with dead barrier", function(state)
+    if state then
+        _G.kineticharge = true
+
+        while _G.kineticharge == true do
+        local args = {
+            [1] = {
+                ["Force"] = 0,
+                ["Direction"] = Vector3.new(1, 1.5, 0)
+            }
+        }
+
+        game:GetService("ReplicatedStorage"):WaitForChild("SelfKnockback"):FireServer(unpack(args))
+        wait()
+end
+    else
+        _G.kineticharge = false
+
+        while _G.kineticharge == true do
+        local args = {
+            [1] = {
+                ["Force"] = 0,
+                ["Direction"] = Vector3.new(1, 1.5, 0)
+            }
+        }
+
+        game:GetService("ReplicatedStorage"):WaitForChild("SelfKnockback"):FireServer(unpack(args))
+        wait()
+        end
+    end
+end)
+
+Toggles1:NewToggle("Spam Quake", "nuke", function(state)
+if state then
+_G.quakenuke = true
+while _G.quakenuke == true do
+local args = {
+    [1] = {
+        ["start"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("QuakeQuake"):FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["start"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("QuakeQuake"):FireServer(unpack(args))
+wait()
+end
+else
+_G.quakenuke = false
+while _G.quakenuke == true do
+local args = {
+    [1] = {
+        ["start"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("QuakeQuake"):FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["start"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("QuakeQuake"):FireServer(unpack(args))
+wait()
+end
+end
+end)
+
+Toggles1:NewToggle("Spam Rhythm", "aoe explosion", function(state)
+if state then
+_G.aoe = true
+while _G.aoe == true do
+local args = {
+    [1] = "AoeExplosion",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").rhythmevent:FireServer(unpack(args))
+wait()
+end
+else
+_G.aoe = false
+while _G.aoe == true do
+local args = {
+    [1] = "AoeExplosion",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").rhythmevent:FireServer(unpack(args))
+wait()
+end
+end
 end)
